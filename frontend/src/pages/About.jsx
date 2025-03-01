@@ -12,7 +12,7 @@ const About = () => {
       </div>
 
       <div className='my-10 flex flex-col md:flex-row gap-16'>
-        <img className='w-full md:max-w-[450px]' src={assets.hero_img} alt="" />
+        <img className='w-full md:max-w-[450px]' src={assets.about_img} alt="" />
         <div className='flex flex-col justify-center gap-6 md:w-2/4 text-gray-600'>
           <p>At Haritha Sports, we are passionate about bringing high-quality sports equipment to athletes of all levels. Whether you're a beginner, a seasoned professional, or someone who simply enjoys an active lifestyle, we provide the best gear to help you perform at your peak.</p>
           <p>With a commitment to quality, innovation, and customer satisfaction, Haritha Sports continues to be a trusted name in the world of sports. Gear up, play hard, and achieve greatness with Haritha Sports!</p>
