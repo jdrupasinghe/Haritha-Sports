@@ -8,46 +8,7 @@ import { assets } from '../assets/assets'
 
 const Orders = ({ token }) => {
 
-  const [orders, setOrders] = useState([])
-
-  const fetchAllOrders = async () => {
-
-    if (!token) {
-      return null;
-    }
-
-    try {
-
-      const response = await axios.post(backendUrl + '/api/order/list', {}, { headers: { token } })
-      if (response.data.success) {
-        setOrders(response.data.orders.reverse())
-      } else {
-        toast.error(response.data.message)
-      }
-
-    } catch (error) {
-      toast.error(error.message)
-    }
-
-
-  }
-
-  const statusHandler = async ( event, orderId ) => {
-    try {
-      const response = await axios.post(backendUrl + '/api/order/status' , {orderId, status:event.target.value}, { headers: {token}})
-      if (response.data.success) {
-        await fetchAllOrders()
-      }
-    } catch (error) {
-      console.log(error)
-      toast.error(response.data.message)
-    }
-  }
-
-  useEffect(() => {
-    fetchAllOrders();
-  }, [token])
-
+  
   return (
     <div>
       <h3>Order Page</h3>
