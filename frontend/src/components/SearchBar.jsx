@@ -29,4 +29,4 @@ const SearchBar = () => {
   ) : null
 }
 
-export default SearchBa
+export default SearchBar
