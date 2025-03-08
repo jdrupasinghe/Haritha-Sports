@@ -1,3 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap'); */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background-color: #E3E6D8;
+  }
+
+/* Background Colors */
+.bg-dark-green { background-color: #1B4D3E; }  /* Dark Green */
+.bg-forest-green { background-color: #2E7D32; }  /* Forest Green */
+.bg-lime-green { background-color: #A5D66B; }  /* Lime Green */
+.bg-light-beige { background-color: #F5F5DC; }  /* Light Beige */
+.bg-white { background-color: #FFFFFF; }  /* White */
+.bg-gold-yellow { background-color: #F4C430; }  /* Gold Yellow */
+.bg-light-greenish-beige { background-color: #E3E6D8; }  /* Light Greenish Beige */
+.bg-very-light-olive { background-color: #F8FAE5; }  /* Very Light Olive */
+
+/* Text Colors */
+.text-dark-green { color: #1B4D3E; }  /* Dark Green */
+.text-forest-green { color: #2E7D32; }  /* Forest Green */
+.text-light-beige { color: #F5F5DC; }  /* Light Beige */
+.text-white { color: #FFFFFF; }  /* White */
+.text-gold-yellow { color: #F4C430; }  /* Gold Yellow */
+.text-deep-olive-green { color: #2E4B3A; }  /* Deep Olive Green */
+
+/* Button Styles */
+.btn-dark-green {
+  background-color: #1B4D3E;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-dark-green:hover {
+  background-color: #2E7D32;
+  color: #F4C430;
+}
+
+/* Utility Classes */
+.border-dark-green { border: 2px solid #1B4D3E; }
+.border-gold-yellow { border: 2px solid #F4C430; }
+.shadow-soft { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+.rounded { border-radius: 8px; }
+
+* {
+    font-family: 'Poppins';
+  }
+  
+  .prata-regular {
+    font-family: "Prata", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  a.active hr {
+    display: block;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  @media (max-width:640px) {
+    a.active {
+      background-color: black;
+      color: white;
+    }
+  }
