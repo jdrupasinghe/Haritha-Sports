@@ -5,7 +5,47 @@ import { toast } from 'react-toastify';
 
 const Login = () => {
 
-  
+  const [currentState, setCurrentState] = useState('Login');
+  const { token, setToken, navigate, backendUrl } = useContext(ShopContext)
+
+  const [name,setName] = useState('')
+  const [password,setPasword] = useState('')
+  const [email,setEmail] = useState('')
+
+  const onSubmitHandler = async (event) => {
+      event.preventDefault();
+      try {
+        if (currentState === 'Sign Up') {
+          
+          const response = await axios.post(backendUrl + '/api/user/register',{name,email,password})
+          if (response.data.success) {
+            setToken(response.data.token)
+            localStorage.setItem('token',response.data.token)
+          } else {
+            toast.error(response.data.message)
+          }
+
+        } else {
+
+          
+          } else {
+            toast.error(response.data.message)
+          }
+
+        }
+
+
+      } catch (error) {
+        console.log(error)
+        toast.error(error.message)
+      }
+  }
+
+  useEffect(()=>{
+    if (token) {
+      navigate('/')
+    }
+  },[token])
 
   return (
     <form onSubmit={onSubmitHandler} className='flex flex-col items-center w-[90%] sm:max-w-96 m-auto mt-14 gap-4 text-gray-800'>
